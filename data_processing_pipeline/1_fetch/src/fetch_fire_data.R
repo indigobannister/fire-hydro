@@ -4,7 +4,7 @@ map_shapes <- function(states_in){
   state_sf <- st_read(states_in) %>% 
     dplyr::select(ID = STUSPS, NAME)  %>% 
     st_transform(proj) %>% 
-    filter(ID %in% c('CA','WA','NV','UT','CO','AZ','NM', 'MT', 'WY', 'OR', 'ID')) 
+    filter(ID %in% c('CA')) 
   
   return(states_west)
 }
